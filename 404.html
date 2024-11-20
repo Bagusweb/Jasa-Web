@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text-center">
+    <div class="text-9xl font-extrabold floating" data-aos="zoom-in" data-aos-duration="500">
+      404
+    </div>
+    <p class="text-2xl mt-4 font-semibold">Oops! Halaman Tidak Ditemukan</p>
+    <p class="mt-2 text-lg">
+      Sepertinya halaman yang Anda cari tidak tersedia atau telah dipindahkan.
+    </p>
+    <a href="index.html" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white text-lg rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-2xl transition-all duration-300">
+      Kembali ke Beranda
+    </a>
+
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jasa pembuatan website profesional dengan berbagai paket sesuai kebutuhan Anda. Pesan sekarang dan tingkatkan kehadiran online Anda!">
+<meta name="keywords" content="Jasa pembuatan website, website murah, desain website, web developer, website profesional">
+
+  <title>Jasa pembuatan website</title>
+
+  <!-- Link Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-gray-50">
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <!-- Gambar Hero di atas tengah -->
+      <img src="https://fayupedia.id/storage/assets/5572a4c6233a39a684407850fccc3b7e.png" alt="Hero Image" class="popup-hero">
+      <h2 class="popup-title">Promo Spesial Jasa Pembuatan Website!</h2>
+      <p class="popup-text">Dapatkan diskon hingga <strong>30%</strong> untuk pembuatan website premium. Jangan lewatkan kesempatan ini, promo terbatas!</p>
+      <a href="https://wa.me/6285894493680" class="popup-btn">Hubungi via WhatsApp</a>
+    </div>
+  </div>
+  
+  <style>
+    /* Pop-up Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.5s ease;
+    }
+  
+    .popup-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      animation: slideUp 0.5s ease;
+    }
+  
+    .popup-hero {
+      width: 100%;
+      max-width: 300px; /* You can adjust this value */
+      margin: 0 auto 20px auto;
+      display: block;
+      animation: bounceIn 1s ease;
+    }
+  
+    .popup-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      animation: popIn 0.5s ease;
+    }
+  
+    .popup-text {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+      animation: popIn 0.5s ease 0.2s;
+    }
+  
+    .popup-btn {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      animation: fadeInBtn 1s ease 0.3s;
+    }
+  
+    .popup-btn:hover {
+      background-color: #0056b3;
+    }
+  
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: #555;
+      cursor: pointer;
+    }
+  
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  
+    @keyframes slideUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  
+    @keyframes bounceIn {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+  
+    @keyframes fadeInBtn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  
+  <script>
+    // Display the popup after 2 seconds
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('popup').style.display = 'flex';
+      }, 2000);
+    };
+  
+    // Close the popup
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+<!-- Navbar -->
+<nav class="bg-white shadow-md sticky-nav" id="navbar">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <h3 class="text-blue-600 text-2xl font-bold">Jasa Web Bagus</h3>
+    <div class="hidden md:flex space-x-6">
+      <a href="#beranda" class="text-gray-600 hover:text-blue-600"><i class="fas fa-house-user"></i> Beranda</a>
+      <a href="#about" class="text-gray-600 hover:text-blue-600"><i class="fas fa-info-circle"></i> Tentang</a>
+      <a href="#portfolio" class="text-gray-600 hover:text-blue-600"><i class="fas fa-briefcase"></i> Portofolio</a>
+      <a href="#price" class="text-gray-600 hover:text-blue-600"><i class="fas fa-dollar-sign"></i> Price-list</a>
+      <a href="#kontak" class="text-gray-600 hover:text-blue-600"><i class="fas fa-phone-alt"></i> Kontak</a>
+      <a href="404.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-newspaper"></i> Blog</a>
+    </div>
+    <div class="md:hidden">
+      <button id="hamburger" class="hamburger flex flex-col justify-center items-center focus:outline-none">
+        <div class="bar1 bg-blue-600 w-6 h-1 mb-1"></div>
+        <div class="bar2 bg-blue-600 w-6 h-1 mb-1"></div>
+        <div class="bar3 bg-blue-600 w-6 h-1"></div>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+<div id="mobile-menu" class="menu bg-white shadow-lg p-4 rounded-lg">
+  <a href="#beranda" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-house-user"></i> Beranda</a>
+  <a href="#about" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-info-circle"></i> Tentang</a>
+  <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-briefcase"></i> Portofolio</a>
+  <a href="#price" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-dollar-sign"></i> Price-list</a>
+  <a href="#kontak" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-phone-alt"></i> Kontak</a>
+  <a href="404.html" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-newspaper"></i> Blog</a>
+</div>
+</nav>
+
+
+
+
+
+
+<!-- Hero Section -->
+<header class="bg-gradient-to-r from-blue-300 to-blue-500 relative h-screen" id="beranda">
+  <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay -->
+  <div class="container mx-auto text-center relative z-10 h-full flex flex-col justify-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown text-white" data-aos="fade-up" data-aos-duration="500">Pesan Dan Buat Website Anda</h1>
+    <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp text-white" data-aos="fade-up" data-aos-duration="700">
+      Buat website impian Anda bersama kami, dengan berbagai pilihan paket sesuai kebutuhan.
+    </p>
+    <a href="https://wa.me/6285894493680?text=Halo,%20saya%20tertarik%20dengan%20jasa%20anda" class="bg-white text-blue-700 rounded-full px-6 py-3 font-semibold transition transform hover:scale-105 hover:bg-blue-600 hover:text-white animate__animated animate__bounce max-w-xs mx-auto" data-aos="zoom-in" data-aos-duration="900">Pesan Sekarang</a>
+  </div>
+</header>
+
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<div class="circle circle-3"></div>
+<div class="circle circle-4"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+
+  
+<!-- Tentang Website Ini Section -->
+<div class="container mx-auto py-16 px-4" id="about">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Tentang Website Ini</h2>
+  <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800" data-aos="fade-up" data-aos-duration="600">
+    <h3 class="text-xl font-semibold mb-2 text-center">
+      <i class="fas fa-globe text-blue-600"></i> Website Kami
+    </h3>
+    <p class="font-semibold mb-4">
+      Website ini didesain khusus untuk menawarkan jasa pembuatan website profesional bagi bisnis atau personal. Kami menyediakan layanan pembuatan website mulai dari website sederhana hingga website dengan fitur kompleks.
+    </p>
+    <p class="font-semibold mb-4">
+      Kami juga berfokus pada pengalaman pengguna yang mudah dan cepat, serta desain yang responsif untuk memastikan website Anda dapat diakses dari perangkat apapun. Dengan pendekatan personal dan fleksibel, kami siap membantu Anda menciptakan website sesuai kebutuhan.
+    </p>
+    <div class="text-right mt-4">
+      <a href="https://wa.me/6285894493680">
+        <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+          Hubungi Kami
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="bubble"></div>
+
+
+<div class="container mx-auto py-16 px-4" id="portfolio">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Portofolio</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Portfolio Item 1 -->
+    <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800" data-aos="zoom-in" data-aos-duration="500">
+      <img src="web1.png" alt="Website 1" class="w-full h-56 object-cover rounded-lg mb-4" />
+      <h3 class="text-xl font-semibold mb-4">Aplikasi Belajar Coding</h3>
+      <p class="text-semibold-700 mb-4">Website ini dirancang untuk menyediakan platform yang mudah diakses bagi siapa saja yang ingin belajar coding dengan materi yang terstruktur.</p>
+      <div class="flex justify-between items-center mt-4">
+        <div></div> <!-- Empty div to fill the left space -->
+        <a href="https://bagusweb.github.io/belajar-coding-with-bagus/" target="_blank">
+          <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+            Demo
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Portfolio Item 2 -->
+    <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800" data-aos="zoom-in" data-aos-duration="600">
+      <img src="web2.png" alt="Website 2" class="w-full h-56 object-cover rounded-lg mb-4" />
+      <h3 class="text-xl font-semibold mb-4">Siatem Kasir Restoran</h3>
+      <p class="text-semibold-700 mb-4">Projek Website Kasir Restoran menggunakan PHP Native mysql Bootstrap, memiliki 3 akses login, admin, kasir, dan pelanggan tetapi harus di regis sama admin</p>
+      <div class="flex justify-between items-center mt-4">
+        <div></div> <!-- Empty div to fill the left space -->
+        <a href="404.html" target="_blank">
+          <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+            Demo
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Portfolio Item 3 -->
+    <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800" data-aos="zoom-in" data-aos-duration="700">
+      <img src="web3.png" alt="Website 3" class="w-full h-56 object-cover rounded-lg mb-4" />
+      <h3 class="text-xl font-semibold mb-4">Absensi Karyawan</h3>
+      <p class="text-semibold-700 mb-4">Sistem informasi karyawan merupakan aplikasi absensi berbasis web, yang dibuat untuk memenuhi kebutuhan perusahaan yang membutuhkan aplikasi absensi karyawan.</p>
+      <div class="flex justify-between items-center mt-4">
+        <div></div> <!-- Empty div to fill the left space -->
+        <a href="404.html" target="_blank">
+          <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+            Demo
+          </button>
+        </a>
+      </div>
+    </div>
+
+        <!-- Portfolio Item 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800" data-aos="zoom-in" data-aos-duration="700">
+          <img src="web4.png" alt="Website 3" class="w-full h-56 object-cover rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold mb-4">Aplikasi Peminjaman Buku</h3>
+          <p class="text-semibold-700 mb-4">
+            Aplikasi ini dirancang untuk memudahkan proses peminjaman buku pada perpustakaan, lengkap dengan fitur pencarian buku, pengelolaan stok, dan laporan peminjaman.
+          </p>
+                    <div class="flex justify-between items-center mt-4">
+            <div></div> <!-- Empty div to fill the left space -->
+            <a href="404.html" target="_blank">
+              <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+                Demo
+              </button>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Portfolio Item 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800" data-aos="zoom-in" data-aos-duration="700">
+          <img src="web5.png" alt="Website 3" class="w-full h-56 object-cover rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold mb-4">Aplikasi Chattingan</h3>
+          <p class="text-semibold-700 mb-4">
+            Aplikasi chatting berbasis web dengan fitur login, daftar, kirim pesan real-time, dan notifikasi, cocok untuk kebutuhan komunikasi tim atau personal.
+          </p>
+                    <div class="flex justify-between items-center mt-4">
+            <div></div> <!-- Empty div to fill the left space -->
+            <a href="404.html" target="_blank">
+              <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+                Demo
+              </button>
+            </a>
+          </div>
+        </div>
+                <!-- Portfolio Item 6 -->
+<div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800" data-aos="zoom-in" data-aos-duration="700">
+  <img src="web6.png" alt="Aplikasi edoc/Rumahsakit" class="w-full h-56 object-cover rounded-lg mb-4" />
+  <h3 class="text-xl font-semibold mb-4">Aplikasi e-Doc untuk Rumah Sakit</h3>
+  <p class="text-semibold-700 mb-4">
+    Aplikasi berbasis web untuk pengelolaan dokumen elektronik (e-Doc) di rumah sakit, meliputi fitur pencatatan pasien, manajemen rekam medis, hingga pengaturan jadwal dokter.
+  </p>
+  <div class="flex justify-between items-center mt-4">
+    <div></div> <!-- Empty div to fill the left space -->
+    <a href="404.html" target="_blank">
+      <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+        Demo
+      </button>
+    </a>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+<div class="container mx-auto py-16 px-4" id="price">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Price List</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <!-- Basic Package -->
+    <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800 flex flex-col justify-between h-full" data-aos="zoom-in" data-aos-duration="500">
+      <h3 class="text-xl font-semibold mb-4">Basic Package</h3>
+      <p class="text-semibold-700 mb-4">Website sederhana cocok untuk portfolio atau blog pribadi.</p>
+      <p class="text-xl font-bold text-semibold-800 mb-4">Rp 150.000</p>
+      <ul class="list-disc pl-5 text-semibold-700 mb-4">
+        <li>Desain Sederhana</li>
+        <li>1 Halaman Utama</li>
+        <li>Integrasi Sosial Media</li>
+        <li>Formulir Kontak Sederhana</li>
+      </ul>
+      <!-- Button to WhatsApp -->
+      <div class="text-right mt-auto">
+        <a href="https://wa.me/6285894493680?text=Halo%20saya%20tertarik%20dengan%20Basic%20Package" target="_blank">
+          <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+            Pesan
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Standard Package -->
+    <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800 flex flex-col justify-between h-full" data-aos="zoom-in" data-aos-duration="600">
+      <h3 class="text-xl font-semibold mb-4">Standard Package</h3>
+      <p class="text-semibold-700 mb-4">Website dengan fitur lebih lengkap, ideal untuk blog atau website bisnis kecil.</p>
+      <p class="text-xl font-bold text-semibold-800 mb-4">Rp 500.000</p>
+      <ul class="list-disc pl-5 text-semibold-700 mb-4">
+        <li>Desain Responsif</li>
+        <li>3 Halaman (Utama, Tentang, Kontak)</li>
+        <li>Integrasi Sosial Media</li>
+        <li>Formulir Kontak</li>
+        <li>SEO Basic</li>
+        <li>Blog</li>
+      </ul>
+      <!-- Button to WhatsApp -->
+      <div class="text-right mt-auto">
+        <a href="https://wa.me/6285894493680?text=Halo%20saya%20tertarik%20dengan%20Standard%20Package" target="_blank">
+          <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+            Pesan
+          </button>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Premium Package -->
+    <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800 flex flex-col justify-between h-full" data-aos="zoom-in" data-aos-duration="700">
+      <h3 class="text-xl font-semibold mb-4">Premium Package</h3>
+      <p class="text-semibold-700 mb-4">Paket lengkap dengan semua fitur, cocok untuk bisnis profesional atau e-commerce.</p>
+      <p class="text-xl font-bold text-semibold-800 mb-4">Rp 1.000.000</p>
+      <ul class="list-disc pl-5 text-semibold-700 mb-4">
+        <li>Desain Custom</li>
+        <li>5 Halaman atau lebih</li>
+        <li>Integrasi Sosial Media</li>
+        <li>Formulir Kontak</li>
+        <li>SEO Lanjutan</li>
+        <li>Integrasi E-commerce</li>
+      </ul>
+      <!-- Button to WhatsApp -->
+      <div class="text-right mt-auto">
+        <a href="https://wa.me/6285894493680?text=Halo%20saya%20tertarik%20dengan%20Premium%20Package" target="_blank">
+          <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+            Pesan
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Premium Package -->
+<div id="premium-package" class="premium-package-container" data-aos="fade-up" data-aos-delay="300">
+  <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 active:bg-blue-800 flex flex-col justify-between h-full">
+    <h3 class="text-xl font-semibold mb-4">Premium Package</h3>
+    <p class="text-semibold-700 mb-4">Website premium dengan desain unik dan fitur custom, ideal untuk perusahaan besar.</p>
+    <p class="text-xl font-bold text-semibold-800 mb-4">Rp 10.000.000</p>
+    <ul class="list-disc pl-5 text-semibold-700 mb-4">
+      <li>Desain Kustom</li>
+      <li>Fitur E-commerce</li>
+      <li>SEO Lanjutan</li>
+      <li>Integrasi Sosial Media</li>
+      <li>Maintenance 1 Tahun</li>
+    </ul>
+    <!-- Button to WhatsApp -->
+    <div class="text-right mt-auto">
+      <a href="https://wa.me/6285894493680?text=Halo%20saya%20tertarik%20dengan%20Premium%20Package" target="_blank">
+        <button class="px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 active:bg-blue-800">
+          Pesan
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- FAQ Section -->
+<div class="container mx-auto py-16 px-4" id="faq">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Pertanyaan Umum</h2>
+  <p class="text-lg text-center mb-16" data-aos="fade-up">Berikut telah kami rangkum beberapa pertanyaan yang sering ditanyakan client terkait layanan kami</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- Image Section (Left Side) -->
+    <div class="flex justify-center items-center" data-aos="fade-right">
+      <img src="faq.png" alt="FAQ Image" class="rounded-lg shadow-lg">
+    </div>
+
+    <!-- FAQ Content (Right Side) -->
+    <div class="space-y-8" data-aos="fade-left">
+      <!-- FAQ 1 -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-2">Apa Itu Bagusweb?</h3>
+        <p class="text-gray-600">
+          Bagusweb adalah layanan pembuatan website profesional dengan berbagai pilihan paket yang sesuai dengan kebutuhan bisnis Anda, mulai dari website sederhana hingga website dengan fitur lengkap.
+        </p>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-left" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-2">Layanan Apa Saja Yang Tersedia di Bagusweb?</h3>
+        <p class="text-gray-600">
+          Bagusweb menyediakan layanan pembuatan website dengan berbagai pilihan paket, mulai dari paket standar hingga premium, yang mencakup desain custom, fitur e-commerce, SEO, dan integrasi media sosial.
+        </p>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-left" data-aos-delay="200">
+        <h3 class="text-xl font-semibold mb-2">Bagaimana Cara Memesan Website di Bagusweb?</h3>
+        <p class="text-gray-600">
+          Anda dapat memesan website melalui halaman kontak kami atau langsung menghubungi kami via WhatsApp. Tim kami akan membantu Anda memilih paket yang sesuai dengan kebutuhan Anda.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Kontak Section -->
+<div class="container mx-auto py-16 px-4" id="kontak">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Kontak</h2>
+  <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <form id="kontakForm" method="POST">
+          <div class="mb-4">
+              <label for="name"><i class="fas fa-user"></i> Nama</label>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required="required" class="mt-1 p-2 border border-gray-300 rounded w-full">
+          </div>
+          <div class="mb-4">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required="required" class="mt-1 p-2 border border-gray-300 rounded w-full">
+          </div>
+          <div class="mb-4">
+              <label for="message"><i class="fas fa-comment"></i> Pesan</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda" required class="mt-1 p-2 border border-gray-300 rounded w-full"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 text-white rounded px-4 py-2">Kirim Pesan</button>
+      </form>
+      <p id="responseMessage" class="text-green-600 mt-4" style="display: none;">Pesan Anda telah berhasil dikirim!</p>
+  </div>
+</div>
+<!-- Metode Pembayaran -->
+<div id="payment-methods" class="payment-methods">
+  <h3 class="payment-title">Metode Pembayaran</h3>
+  <div class="payment-icons">
+    <!-- QRIS -->
+    <div class="payment-icon" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://fayupedia.id/storage/assets/80f171b08426b1e7ee5362b1fc627cbb.jpg" alt="QRIS" class="payment-img">
+    </div>
+    <!-- Dana -->
+    <div class="payment-icon" data-aos="fade-up" data-aos-delay="400">
+      <img src="dana.png" alt="Dana" class="payment-img">
+    </div>
+    <!-- BCA -->
+    <div class="payment-icon" data-aos="fade-up" data-aos-delay="600">
+      <img src="bca.png" alt="BCA" class="payment-img">
+    </div>
+    <!-- Indomaret -->
+    <div class="payment-icon" data-aos="fade-up" data-aos-delay="800">
+      <img src="indo.png" alt="Indomaret" class="payment-img">
+    </div>
+    <!-- Alfamart -->
+    <div class="payment-icon" data-aos="fade-up" data-aos-delay="1000">
+      <img src="alfa.png" alt="Alfamart" class="payment-img">
+    </div>
+    <!-- Mandiri -->
+    <div class="payment-icon" data-aos="fade-up" data-aos-delay="1200">
+      <img src="mandiri.png" alt="Mandiri" class="payment-img">
+    </div>
+  </div>
+</div>
+
+
+<style>
+  /* Payment Methods Section */
+  .payment-methods {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .payment-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #141414; /* White color for the title */
+  }
+
+  .payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Icon Styling */
+  .payment-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffffff; /* White background for each icon */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 0; /* Initial opacity for animation */
+    animation: fadeInUp 0.5s forwards; /* Apply animation */
+  }
+
+  /* Apply animation with delay for each icon */
+  .payment-icon:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .payment-icon:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .payment-icon:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  .payment-icon:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+
+  .payment-icon:nth-child(5) {
+    animation-delay: 1s;
+  }
+
+  .payment-icon:nth-child(6) {
+    animation-delay: 1.2s;
+  }
+
+  .payment-icon:hover {
+    transform: scale(1.1); /* Scale up on hover */
+  }
+
+  .payment-img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+      <div class="footer-section">
+          <h3>Tentang Kami</h3>
+          <p>Bagus Web adalah penyedia jasa pembuatan website profesional yang berfokus pada kualitas dan kepuasan klien.</p>
+          <div class="social-links">
+              <a href="https://github.com/Bagusweb"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/lanzzz.20?igsh=ZmZxOHFtMnFhd212"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/6285894493680"><i class="fab fa-whatsapp"></i></a>
+          </div>
+      </div>
+      <div class="footer-section">
+          <h3>Links</h3>
+          <ul>
+              <li><a href="#home">Beranda</a></li>
+              <li><a href="#about">Tentang</a></li>
+              <li><a href="#services">Layanan</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+              <li>Web Development</li>
+              <li>E-Commerce</li>
+              <li>SEO Optimization</li>
+              <li>Web Maintenance</li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Hubungi Kami</h3>
+          <p>
+              Email: laptopbagus139@gmail.com<br>
+              Phone: +62-8589-4493-680<br>
+              Alamat: Depok, Indonesia
+          </p>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Bagus Web. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/6285894493680?text=Halo,%20saya%20tertarik%20dengan%20jasa%20anda" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-float" />
+</a>
+
+<!-- Custom CSS for Floating WhatsApp Button -->
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+</style>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js">
+  </script>
+  <!-- Modal for Full Image -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div class="relative">
+    <img id="modalImage" class="rounded-lg max-w-full max-h-screen" src="" alt="Fullscreen Image" />
+    <button class="absolute top-4 right-4 text-black text-2xl" id="closeModal">✖</button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
+
+  document.querySelectorAll(".grid img").forEach((img) => {
+    img.addEventListener("click", () => {
+      modalImage.src = img.src;
+      modal.classList.remove("hidden");
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.add("hidden");
+  });
+</script>
+
+</body>
+</html>
